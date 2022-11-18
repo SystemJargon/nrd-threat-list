@@ -1,0 +1,42 @@
+name: List Builder Compiler
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@main
+    - uses: actions/setup-node@main
+      with:
+        node-version: '16'  
+    - run: npm i -g @adguard/hostlist-compiler
+    
+    - name: Compile nrd-threat-list-hosts
+      run: hostlist-compiler -c ./sources/blocklists/nrd-threat-list-hosts.json -o nrd-threat-list-hosts.txt
+
+    - name: Compile nrd-threat-list-agh
+      run: hostlist-compiler -c ./sources/blocklists/nrd-threat-list-agh.json -o nrd-threat-list-agh.txt
+                 
+    - name: Start commit change
+      run: echo "MSG=Update filter list at $(date +"%Y%m%d")" >> $GITHUB_ENV
+    
+    - name: Commit changes
+      uses: EndBug/add-and-commit@main
+      with:
+        default_author: github_actions
+        message: ${{ env.MSG }}
+    
+    - name: Delete workflow runs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        token: ${{ github.token }}
+        repository: ${{ github.repository }}
+        retain_days: 1
+        keep_minimum_runs: 1

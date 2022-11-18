@@ -1,0 +1,14 @@
+{
+   "name":"nrd-threat-list - AdGuard format",
+   "sources":[
+      {
+         "source":"https://dl.threat-list.com/1/domains.txt",
+         "type":"adblock"
+      },  
+	         {
+         "source":"https://dl.nrd-list.com/1/nrd-list-7-days.txt",
+         "type":"adblock"
+      } 
+	],
+    "transformations": ["Compress","Validate","Deduplicate"]
+}

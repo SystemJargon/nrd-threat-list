@@ -1,0 +1,14 @@
+{
+   "name":"nrd-threat-list - Hosts format",
+   "sources":[
+      {
+         "source":"https://dl.nrd-list.com/0/nrd-list-7-days.txt",
+         "type":"hosts"
+      },
+	      {
+         "source":"https://dl.threat-list.com/0/domains.txt",
+         "type":"hosts"
+      }     
+	],
+    "transformations": ["Validate","Deduplicate"]
+}
