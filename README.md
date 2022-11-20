@@ -2,6 +2,7 @@ A repo to aggregate lists from the below sources. Output to two files which are 
 
 Scheduled once a week on Sundays at midnight (UTC).
 
+NRD = Newly Registered Domain
 
 ----
 
