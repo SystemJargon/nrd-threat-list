@@ -23,6 +23,9 @@ jobs:
 
     - name: Compile nrd-threat-list-agh
       run: hostlist-compiler -c ./sources/blocklists/nrd-threat-list-agh.json -o nrd-threat-list-agh.txt
+
+    - name: Compile nrd-list-7-days-agh
+      run: hostlist-compiler -c ./sources/blocklists/nrd-list-7-days-agh.json -o nrd-list-7-days-agh.txt
       
     - name: Compile nrd-list-32-days-agh
       run: hostlist-compiler -c ./sources/blocklists/nrd-list-32-days-agh.json -o nrd-list-32-days-agh.txt
