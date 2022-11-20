@@ -1,0 +1,10 @@
+{
+   "name":"nrd-threat-32day-list - AdGuard format",
+   "sources":[
+      {
+         "source":"https://dl.nrd-list.com/1/nrd-list-32-days.txt",
+         "type":"adblock"
+      } 
+	],
+    "transformations": ["Compress","Validate","Deduplicate"]
+}
