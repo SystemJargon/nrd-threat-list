@@ -1,0 +1,10 @@
+{
+   "name":"nrd-list-7-days - AdGuard format",
+   "sources":[
+      {
+         "source":"https://dl.nrd-list.com/0/nrd-list-7-days.txt",
+         "type":"adblock"
+      } 
+	],
+    "transformations": ["Compress","Validate","Deduplicate"]
+}
