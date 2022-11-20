@@ -23,7 +23,10 @@ jobs:
 
     - name: Compile nrd-threat-list-agh
       run: hostlist-compiler -c ./sources/blocklists/nrd-threat-list-agh.json -o nrd-threat-list-agh.txt
-                 
+      
+    - name: Compile nrd-threat-32day-list-agh
+      run: hostlist-compiler -c ./sources/blocklists/nrd-threat-32day-list-agh.json -o nrd-threat-32day-list-agh.txt
+             
     - name: Start commit change
       run: echo "MSG=Update filter list at $(date +"%Y%m%d")" >> $GITHUB_ENV
     
