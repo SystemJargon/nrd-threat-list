@@ -4,6 +4,8 @@ Scheduled once a week on Sundays at midnight (UTC).
 
 NRD = Newly Registered Domain
 
+Found this on Reddit [here](https://www.reddit.com/r/pihole/comments/yxxeo1/block_lists_for_security/)
+
 ----
 
 Domains - pi-hole:
