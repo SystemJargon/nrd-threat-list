@@ -1,5 +1,5 @@
 {
-   "name":"nrd-threat-32day-list - AdGuard format",
+   "name":"nrd-list-32-days - AdGuard format",
    "sources":[
       {
          "source":"https://dl.nrd-list.com/1/nrd-list-32-days.txt",
