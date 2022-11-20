@@ -1,4 +1,4 @@
-A repo to aggregate lists from the below sources. Output to two files which are AdGuard and domains (pi-hole) compatible.
+A repo to aggregate lists from the below sources. Output to joint (or split) files which are AdGuard and domains (pi-hole) compatible.
 
 Scheduled once a week on Sundays at midnight (UTC).
 
